@@ -27,6 +27,8 @@
     <Copyright>Copyright (c) 2020 syp.biz</Copyright>
     <PackageTags>Common; Extensions; Utilities; .NET</PackageTags>
     <DelaySign>false</DelaySign>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
