@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>syp.biz.Common.NET</name>
+    </assembly>
+    <members>
+        <member name="T:syp.biz.Common.NET.Extensions.DictionaryExtensions">
+            <summary>
+            A set of <see cref="T:System.Collections.Generic.IDictionary`2"/> related extension methods.
+            </summary>
+        </member>
+        <member name="M:syp.biz.Common.NET.Extensions.DictionaryExtensions.GetValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)">
+            <summary>
+            Gets the value associated with the specified key, or <c>default</c> of <typeparamref name="TValue"/> if not present in the <paramref name="dictionary"/>.
+            </summary>
+            <typeparam name="TKey">The type of the key.</typeparam>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="dictionary">The <see cref="T:System.Collections.Generic.IDictionary`2"/> to search.</param>
+            <param name="key">The key to search for.</param>
+            <param name="defaultValue">Optional. Value to return in case not found. Default is <c>default</c>.</param>
+            <returns>
+            The value of <paramref name="key"/> in the <paramref name="dictionary"/>, or <c>default</c> of <typeparamref name="TValue"/> if not found or if <paramref name="dictionary"/> is <c>null</c>.
+            </returns>
+        </member>
+        <member name="T:syp.biz.Common.NET.Extensions.EnumerableExtensions">
+            <summary>
+            A set of <see cref="T:System.Collections.Generic.IEnumerable`1"/> related extension methods.
+            </summary>
+        </member>
+        <member name="M:syp.biz.Common.NET.Extensions.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Performs the specified <paramref name="action"/> on each element of the <paramref name="sequence"/>.
+            </summary>
+            <param name="sequence">The <see cref="T:System.Collections.Generic.IEnumerable`1"/> sequence of elements to perform the <paramref name="action"/> on.</param>
+            <param name="action">The <see cref="T:System.Action`1"/> delegate to perform on each element of the <paramref name="sequence"/>.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="sequence"/> or <paramref name="action"/> are <c>null</c>.</exception>
+            <exception cref="T:System.InvalidOperationException">An element in the <paramref name="sequence"/> has been modified.</exception>
+        </member>
+        <member name="T:syp.biz.Common.NET.Extensions.EnumExtensions">
+            <summary>
+            A set of <see cref="T:System.Enum"/> related extension methods.
+            </summary>
+        </member>
+        <member name="M:syp.biz.Common.NET.Extensions.EnumExtensions.GetDescription``1(``0)">
+            <summary>
+            Gets the <see cref="P:System.ComponentModel.DescriptionAttribute.Description"/> of the <paramref name="enum"/> member of <typeparamref name="T"/>.
+            </summary>
+            <typeparam name="T">The enum type.</typeparam>
+            <param name="enum">The enum member.</param>
+            <returns>The <see cref="P:System.ComponentModel.DescriptionAttribute.Description"/> of an enum member if set, otherwise <c>null</c></returns>
+        </member>
+        <member name="M:syp.biz.Common.NET.Extensions.EnumExtensions.GetMemberDescriptions``1">
+            <summary>
+            Gets a lookup dictionary of the members of <typeparamref name="T"/> and their <see cref="P:System.ComponentModel.DescriptionAttribute.Description"/>, if defined.
+            </summary>
+            <typeparam name="T">The enum type.</typeparam>
+            <returns>
+            An <see cref="T:System.Collections.Generic.IDictionary`2"/> of the members of the <typeparamref name="T"/> enum
+            and their <see cref="P:System.ComponentModel.DescriptionAttribute.Description"/> if defined, otherwise <c>null</c>.
+            </returns>
+        </member>
+        <member name="M:syp.biz.Common.NET.Extensions.EnumExtensions.GetDescriptionMembers``1">
+            <summary>
+            Gets a lookup dictionary of the <see cref="P:System.ComponentModel.DescriptionAttribute.Description"/> and their corresponding members of <typeparamref name="T"/>.
+            </summary>
+            <typeparam name="T">The enum type.</typeparam>
+            <returns>
+            An <see cref="T:System.Collections.Generic.IDictionary`2"/> of the members of the <see cref="P:System.ComponentModel.DescriptionAttribute.Description"/>
+            of members of the <typeparamref name="T"/> enum and their values if defined;<br/>
+            Members of <typeparamref name="T"/> without a defined <see cref="T:System.ComponentModel.DescriptionAttribute"/> are excluded.
+            </returns>
+        </member>
+        <member name="T:syp.biz.Common.NET.Extensions.NameValueCollectionExtensions">
+            <summary>
+            A set of <see cref="T:System.Collections.Specialized.NameValueCollection"/> related extension methods.
+            </summary>
+        </member>
+        <member name="M:syp.biz.Common.NET.Extensions.NameValueCollectionExtensions.AsEnumerable(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Enumerates the <paramref name="collection"/> as a <c>name/value</c> <see cref="T:System.Tuple"/>.
+            </summary>
+            <param name="collection">The <see cref="T:System.Collections.Specialized.NameValueCollection"/> to enumerate.</param>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <c>name/value</c> <see cref="T:System.Tuple"/>.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="collection"/> is <c>null</c>.</exception>
+        </member>
+        <member name="T:syp.biz.Common.NET.Extensions.StringExtensions">
+            <summary>
+            A set of <see cref="T:System.String"/> related extension methods.
+            </summary>
+        </member>
+        <member name="M:syp.biz.Common.NET.Extensions.StringExtensions.IsNullOrWhiteSpace(System.String)">
+            <summary>
+            Indicates whether a specified string is null, empty, or consists only of white-space characters.
+            </summary>
+            <param name="value">The string to test.</param>
+            <returns>
+            <c>true</c> if <paramref name="value"/> is <c>null</c> or <see cref="F:System.String.Empty"/>,
+            or if <paramref name="value"/> consists exclusively of white-space characters.
+            </returns>
+            <seealso cref="M:System.String.IsNullOrWhiteSpace(System.String)"/>
+        </member>
+        <member name="M:syp.biz.Common.NET.Extensions.StringExtensions.IsNullOrEmpty(System.String)">
+            <summary>
+            Indicates whether the specified string is null or an <see cref="F:System.String.Empty"></see> string.
+            </summary>
+            <param name="value">The string to test.</param>
+            <returns>
+            <c>true</c> if the <paramref name="value">value</paramref> parameter is null or an empty string (""); otherwise, <c>false</c>.
+            </returns>
+            <seealso cref="M:System.String.IsNullOrEmpty(System.String)"/>
+        </member>
+        <member name="T:syp.biz.Common.NET.Extensions.TaskExtensions">
+            <summary>
+            A set of <see cref="T:System.Threading.Tasks.Task"/> related extension methods.
+            </summary>
+        </member>
+        <member name="M:syp.biz.Common.NET.Extensions.TaskExtensions.IgnoreAwait(System.Threading.Tasks.Task)">
+            <summary>
+            Ignores the awaitable task while disabling context capture.
+            </summary>
+            <param name="task">The <see cref="T:System.Threading.Tasks.Task"/> to ignore</param>
+            <remarks>
+            Implemented as calling <see cref="M:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)"/> with <c>false</c>.
+            </remarks>
+        </member>
+        <member name="T:syp.biz.Common.NET.Extensions.UriExtensions">
+            <summary>
+            A set of <see cref="T:System.Uri"/> related extension methods.
+            </summary>
+        </member>
+        <member name="M:syp.biz.Common.NET.Extensions.UriExtensions.AppendPath(System.Uri,System.String)">
+            <summary>
+            Appends the <paramref name="path"/> to the <paramref name="uri"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> to append to.</param>
+            <param name="path">The path to append</param>
+            <returns>A new <see cref="T:System.Uri"/> with the appended <paramref name="path"/>.</returns>
+        </member>
+        <member name="M:syp.biz.Common.NET.Extensions.UriExtensions.AppendPath(System.UriBuilder,System.String)">
+            <summary>
+            Appends the <paramref name="path"/> to the <see cref="P:System.UriBuilder.Path"/> of <paramref name="builder"/>.
+            </summary>
+            <param name="builder">The <see cref="T:System.UriBuilder"/> to append to.</param>
+            <param name="path">The path to append</param>
+            <returns>The provided <paramref name="builder"/> with the appended <paramref name="path"/>.</returns>
+        </member>
+        <member name="T:syp.biz.Common.NET.Utils.Random">
+            <summary>
+            A set of randomizing methods.
+            </summary>
+        </member>
+        <member name="M:syp.biz.Common.NET.Utils.Random.GetString(System.Int32,System.Collections.Generic.IReadOnlyList{System.Char})">
+            <summary>
+            Gets a string of random characters.
+            </summary>
+            <param name="length">The length of string to produce.</param>
+            <param name="charSource">Optional. A collection of <see cref="T:System.Char"/> to use in the randomization. Default is <c>a-z0-5</c>.</param>
+            <returns>A string of (<paramref name="length"/> long) random characters from <paramref name="charSource"/>.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="length"/> less than <c>1</c>.</exception>
+        </member>
+        <member name="M:syp.biz.Common.NET.Utils.Random.GetNumber(System.Int64)">
+            <summary>
+            Gets a random <see cref="T:System.Int64"/> between <c>0</c>-<paramref name="max"/> (exclusive).
+            </summary>
+            <param name="max">The maximal number to return.</param>
+            <returns>A random <see cref="T:System.Int64"/> between <c>0</c>-<paramref name="max"/> (exclusive).</returns>
+        </member>
+        <member name="M:syp.biz.Common.NET.Utils.Random.GetNumberString(System.Int64)">
+            <summary>
+            Gets a left-<c>0</c>-padded string of a number between <c>0</c>-<paramref name="max"/> (exclusive).
+            </summary>
+            <param name="max">The maximal number to return.</param>
+            <returns>A left-<c>0</c>-padded string of a number between <c>0</c>-<paramref name="max"/> (exclusive).</returns>
+            <example>
+            GetNumberString(100) --> "00"-"99"
+            GetNumberString(101) --> "000"-"100"
+            </example>
+        </member>
+    </members>
+</doc>
